@@ -1,0 +1,22 @@
+name: Validate Citation Metadata
+
+on:
+  push:
+    paths:
+      - 'CITATION.cff'
+  pull_request:
+    paths:
+      - 'CITATION.cff'
+
+jobs:
+  validate-cff:
+    name: Validate CITATION.cff
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate CITATION.cff with cffconvert
+        uses: citation-file-format/cffconvert-github-action@2.0.0
+        with:
+          args: "--validate"

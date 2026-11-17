@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you utilize OmicGene software, algorithms, or curated benchmarks in your research, please cite it as below."
+title: "OmicGene: Advanced Genomic Modeling and Deep Learning Framework for Antimicrobial and Antimycobacterial Resistance"
+version: 0.1.0
+date-released: 2026-01-01
+license: MIT
+repository-code: "https://github.com/omicgene/omicgene"
+url: "https://github.com/omicgene"
+keywords:
+  - computational biology
+  - antimicrobial resistance
+  - antimycobacterial resistance
+  - mycobacterium tuberculosis
+  - genomics
+  - machine learning
+  - deep learning
+  - pangenomics
+  - whole genome sequencing
+authors:
+  - family-names: Rasool
+    given-names: Dar Rehan
+    email: darrehanrasool@gmail.com
+    affiliation: OmicGene Research Consortium
+contact:
+  - email: darrehanrasool@gmail.com
+    name: OmicGene Support

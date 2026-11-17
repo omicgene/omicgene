@@ -1,0 +1,41 @@
+name: "🔬 Benchmark / Paper Reproduction"
+description: "Report results or issues reproducing a published paper's antimicrobial resistance benchmark."
+title: "[REPRODUCE]: "
+labels: ["research", "benchmark", "reproducibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Scientific reproducibility is at the core of OmicGene. Use this form to report validation, reproduction, or performance divergence with published literature.
+  - type: input
+    id: paper_title
+    attributes:
+      label: Target Paper & DOI
+      placeholder: "e.g., CRyPTIC Consortium (2018), NEJM, DOI: 10.1056/NEJMoa1800474"
+    validations:
+      required: true
+  - type: textarea
+    id: dataset
+    attributes:
+      label: Dataset / Isolates Used
+      description: Specific cohorts, BioProject accessions, or isolate IDs tested.
+      placeholder: e.g. NCBI PRJNA..., CRyPTIC 10k cohort, PATRIC M. tuberculosis subset
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Performance Comparison
+      description: Compare reported metrics (AUROC, Sensitivity, Specificity, Very Major Error rate) with OmicGene reproduced metrics.
+      placeholder: |
+        | Drug | Published Sens | Reproduced Sens | Published Spec | Reproduced Spec |
+        | --- | --- | --- | --- | --- |
+        | Isoniazid | 95.2% | 94.8% | 98.0% | 98.1% |
+        | Rifampicin | 97.5% | 97.1% | 98.8% | 99.0% |
+    validations:
+      required: true
+  - type: textarea
+    id: observations
+    attributes:
+      label: Key Findings & Divergence Analysis
+      description: Analysis of differences, hyperparameter variations, or genomic feature representations.

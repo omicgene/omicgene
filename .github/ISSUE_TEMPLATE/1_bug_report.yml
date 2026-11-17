@@ -1,0 +1,56 @@
+name: "🐛 Bug Report"
+description: "Report an issue, error, or unexpected behavior in the OmicGene platform or pipeline."
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please provide as much context as possible to ensure reproducibility.
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem Description
+      description: A clear and concise description of the bug.
+      placeholder: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Minimal reproducible example or code snippet.
+      placeholder: |
+        1. Run command '...'
+        2. With input data '...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment & Dependencies
+      description: Python version, OS, PyTorch / BioPython / package versions.
+      placeholder: |
+        - OS: macOS / Ubuntu 22.04
+        - Python: 3.11 / 3.12
+        - PyTorch / CUDA version:
+        - OmicGene commit/version:
+    validations:
+      required: true
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate.
+          required: true
+        - label: I have verified that no private patient health information (PHI) or confidential biological data is included.
+          required: true

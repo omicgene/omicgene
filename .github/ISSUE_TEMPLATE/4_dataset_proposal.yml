@@ -1,0 +1,39 @@
+name: "🧬 Dataset / Cohort Proposal"
+description: "Propose integrating a new bacterial isolate dataset, WGS cohort, or minimum inhibitory concentration (MIC) phenotypic database."
+title: "[DATASET]: "
+labels: ["dataset", "data-governance"]
+body:
+  - type: input
+    id: dataset_name
+    attributes:
+      label: Dataset Name & Organism
+      placeholder: "e.g., Global Mycobacterium tuberculosis Clinical Isolates (Lineage 1-4)"
+    validations:
+      required: true
+  - type: input
+    id: data_source
+    attributes:
+      label: Accession / Repository Link
+      placeholder: "e.g., NCBI BioProject PRJNA..., ENA, BV-BRC, WHO AMR Surveillance"
+    validations:
+      required: true
+  - type: textarea
+    id: data_characteristics
+    attributes:
+      label: Cohort Size, Sequencing Tech, and Phenotype Data
+      placeholder: |
+        - Sample count: ~2,500 isolates
+        - Sequencing: Illumina HiSeq / NovaSeq PE150, Oxford Nanopore
+        - Phenotypes: Microdilution MIC for Rifampicin, Isoniazid, Ethambutol, Pyrazinamide
+        - Metadata: Geographic origin, lineage, lineage-defining SNPs
+    validations:
+      required: true
+  - type: checkboxes
+    id: governance
+    attributes:
+      label: Data Governance & Ethics
+      options:
+        - label: The dataset is publicly accessible or open under a research license (e.g., CC-BY, Open Data Commons).
+          required: true
+        - label: No identifiable human genomic sequence or protected health information (PHI) is present.
+          required: true
