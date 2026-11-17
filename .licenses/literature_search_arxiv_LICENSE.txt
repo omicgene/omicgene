@@ -1,2 +1,0 @@
-Notification: Please check the terms at https://info.arxiv.org/help/api/index.html and always check the license of the papers retrieved for any restrictions.
-Timestamp: 2026-11-17T21:20:55+05:30
