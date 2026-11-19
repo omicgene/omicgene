@@ -10,3 +10,10 @@ Welcome to **omicgene**! This repository is dedicated to advancing computational
 - 🤝 [Contributing Guidelines](CONTRIBUTING.md) — How to contribute code, models, and literature
 - 📜 [Code of Conduct](CODE_OF_CONDUCT.md) — Our community standards and commitments
 - 🔒 [Security Policy](SECURITY.md) — Vulnerability reporting and data guidelines
+
+## Contributors
+
+Thank you to everyone contributing to the development and maintenance of **omicgene**:
+
+- [Dar Rehan Rasool](https://github.com/darrehanrasool)
+- [Shafiya Bashir](https://github.com/Shafiya-Bashir)
