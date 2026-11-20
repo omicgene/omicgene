@@ -191,7 +191,14 @@ This directory houses seminal, peer-reviewed, and top-tier workshop/conference p
 
 ---
 
-## 🔍 How to Utilize These Papers in OmicGene
+## 📚 Special Curated Collections
+
+* **Prof. Aasif Assad Curated AMR Literature Collection**
+  * **Curator:** Prof. Aasif Assad
+  * **Focus:** Deep neural networks, transfer learning, metagenomic ARGs, and whole-genome sequencing ML models.
+  * **Directory & Index:** [`papers/aasif-assad/INDEX.md`](aasif-assad/INDEX.md)
+
+---
 
 1. **Benchmark Replication**: Use `papers/2021/2021_CRyPTIC_Genomes12289Isolates_PLoS_bioRxiv.pdf` to calibrate baseline models on the 12,289 isolate cohort.
 2. **Architecture Inspiration**: Refer to `papers/2025/2025_VAMPNet_MTBDrugResistance.pdf` and `papers/2025/2025_GraphAttention_MtbPositiveSelection.pdf` for state-of-the-art attention and graph mechanisms implemented in `src/omicgene/models/`.
