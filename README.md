@@ -32,4 +32,4 @@ Curated research papers exploring AI, deep neural networks, and whole-genome seq
 Thank you to everyone contributing to the development and maintenance of **omicgene**:
 
 - [Dar Rehan Rasool](https://github.com/darrehanrasool)
-- [Shafiya Bashir](https://github.com/Shafiya-Bashir)
+- [Shafiya Bashir](https://github.com/shafiyabashirpampori)
