@@ -1,5 +1,10 @@
 # omicgene
 
+[![DOI](https://zenodo.org/badge/1460450633.svg)](https://zenodo.org/badge/latestdoi/1460450633)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Project Lead](https://img.shields.io/badge/Project%20Lead-Dar%20Rehan%20Rasool-0284c7.svg)](https://github.com/darrehanrasool)
+
+
 Computational genomics, machine learning, and deep learning for antimicrobial and antimycobacterial resistance (AMR).
 
 ## Overview
