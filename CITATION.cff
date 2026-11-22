@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this multi-omics framework in your research, please cite it as below."
+title: "Omicgene: Multi-Omics Data Integration and Genomic Sequence Intelligence Framework"
+version: 1.0.0
+date-released: 2026-11-22
+url: "https://github.com/omicgene/omicgene"
+license: "MIT"
+type: software
+authors:
+  - family-names: "Rasool"
+    given-names: "Dar Rehan"
+    orcid: "https://orcid.org/0009-0004-6426-5195"
+    affiliation: "Centre for Artificial Intelligence, Islamic University of Science and Technology (IUST), Kashmir"
+    email: "darrehanrasool@gmail.com"

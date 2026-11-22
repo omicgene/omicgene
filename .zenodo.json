@@ -1,0 +1,20 @@
+{
+  "title": "Omicgene: Multi-Omics Data Integration and Genomic Sequence Intelligence Framework",
+  "description": "A high-throughput deep learning and computational biology suite for transcriptomic, genomic variant, and multi-omics biomarker discovery.",
+  "creators": [
+    {
+      "name": "Rasool, Dar Rehan",
+      "affiliation": "Centre for Artificial Intelligence, Islamic University of Science and Technology (IUST), Kashmir",
+      "orcid": "0009-0004-6426-5195"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "genomics",
+    "multi-omics",
+    "bioinformatics",
+    "deep-learning",
+    "biomarkers"
+  ]
+}
