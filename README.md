@@ -1,8 +1,18 @@
 # omicgene
 
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![BioPython](https://img.shields.io/badge/BioPython-1.83+-007acc.svg)](https://biopython.org/)
+[![PyTorch 2.1+](https://img.shields.io/badge/PyTorch-2.1+-ee4c2c.svg)](https://pytorch.org/)
+[![Domain: Computational Genomics](https://img.shields.io/badge/Domain-Computational%20Genomics%20%26%20AMR-emerald.svg)](papers/)
+[![Research Archive: 2015-2025](https://img.shields.io/badge/Literature%20Archive-2015--2025%20Milestones-purple.svg)](papers/INDEX.md)
+[![Curated Collection: Prof. Aasif Assad](https://img.shields.io/badge/Curated%20Collection-Prof.%20Aasif%20Assad-blue.svg)](papers/aasif-assad/INDEX.md)
+[![Focus: Antimicrobial Resistance](https://img.shields.io/badge/Focus-WGS%20%26%20Metagenomic%20Resistance-red.svg)](papers/)
 [![DOI](https://zenodo.org/badge/1460450633.svg)](https://zenodo.org/badge/latestdoi/1460450633)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Project Lead](https://img.shields.io/badge/Project%20Lead-Dar%20Rehan%20Rasool-0284c7.svg)](https://github.com/darrehanrasool)
+[![Copyright](https://img.shields.io/badge/Copyright-%40darrehanrasool-10b981.svg)](https://github.com/darrehanrasool)
 
 
 Computational genomics, machine learning, and deep learning for antimicrobial and antimycobacterial resistance (AMR).
