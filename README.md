@@ -17,6 +17,95 @@
 
 Computational genomics, machine learning, and deep learning for antimicrobial and antimycobacterial resistance (AMR).
 
+---
+
+## 🔬 Problem Statement & Genomic Research Objective
+
+### The Antimicrobial Resistance (AMR) Global Health Crisis
+Antimicrobial resistance is recognized by the World Health Organization (WHO) as one of the top ten global public health threats facing humanity. Traditional culture-based phenotypic antimicrobial susceptibility testing (AST) requires 24 to 72 hours (and weeks for slow-growing pathogens like *Mycobacterium tuberculosis*). High-throughput Whole-Genome Sequencing (WGS) and metagenomic sequencing offer the potential for rapid, comprehensive resistance diagnosis, but mapping raw genetic variation to phenotypic resistance is hindered by polygenic epistatic interactions, novel uncatalogued mutations, and non-coding regulatory variants:
+$$f: \mathcal{S} \in \{A, C, G, T\}^L \xrightarrow{\text{WGS / Metagenome}} \mathbf{y} \in \{0, 1\}^K \quad (\text{Susceptibility/Resistance across } K \text{ Antibiotics})$$
+
+### Core Scientific & Engineering Objectives
+1. **Sequence Representation Learning:** Move beyond rigid rule-based resistance catalogs (e.g., PointFinder, ResFinder) toward continuous representation learning via genomic language models and deep neural networks.
+2. **K-mer & Attention Modeling:** Discretize continuous microbial contigs into variable-length nucleotide tokens ($k$-mers) and apply self-attention to identify distal epistatic interactions and promoter mutations.
+3. **Metagenomic Resistance Gene Discovery:** Classify fragmented reads from polymicrobial clinical samples directly into antibiotic classes and resistance mechanisms (e.g., enzymatic degradation, target alteration, efflux pumps).
+4. **Interpretable Mechanistic Variant Attribution:** Trace model predictions back to specific nucleotide loci and amino acid substitutions to inform clinical microbiological stewardship.
+
+---
+
+## 📐 Genomic System Architecture & ML/Bioinformatics Pipeline Flow
+
+```mermaid
+flowchart TD
+    subgraph DataIngestion["1. Raw Sequencing & Ingestion"]
+        A["Raw FASTQ / WGS Reads (Illumina / Oxford Nanopore)"]
+        B["Quality Control (FastQC, Adapter Trimming)"]
+        C["De Novo Contig Assembly / Reference Alignment (BWA / SPAdes)"]
+    end
+
+    subgraph Featurization["2. Genomic Featurization & Tokenization"]
+        D["k-mer Frequency Decomposition (k=6, k=8)"]
+        E["Variant Calling & SNP/Indel Matrix (GATK / FreeBayes)"]
+        F["Genomic Foundation Model Embeddings (DNABERT / Nucleotide Transformer)"]
+    end
+
+    subgraph Modeling["3. Deep Learning & Transfer Learning Core"]
+        G["DeepARG / MSDeepAMR Multi-Layer Neural Backbone"]
+        H["Multi-Head Self-Attention over Resistance Loci"]
+        I["Transfer Learning from Pan-Bacterial Genomic Pretraining"]
+        J["Sigmoid Multi-Label Resistance Classifiers"]
+    end
+
+    subgraph Clinical["4. Clinical Interpretation & Decision Support"]
+        K["Phenotypic Susceptibility / Minimum Inhibitory Concentration (MIC)"]
+        L["Variant Saliency Maps & Attention Attribution"]
+        M["Antimicrobial Stewardship Actionable Report"]
+    end
+
+    A --> B --> C --> D & E & F --> G & H & I --> J --> K & L & M
+```
+
+---
+
+## 🌐 Interactive Visualizers & ML Engineering Conceptualization (The 16 Tools)
+
+To conceptualize genomic tokenization, high-dimensional sequence embeddings, attention over long DNA contigs, and statistical significance in resistance detection, leverage these canonical interactive tools:
+
+| Domain & Tool | Interactive Visualizer Link | Direct Application to Omicgene Architecture & Flow |
+|---|---|---|
+| **Genomic Sequence Tokenization** | [Tiktokenizer](https://tiktokenizer.vercel.app/) | **k-mer & BPE Tokenization:** Analyze tokenization dynamics, vocabulary size trade-offs, and context compression when encoding nucleotide strings ($A, C, G, T$) into sub-word tokens for genomic transformers. |
+| **Bacterial Strain & Gene Embedding Space** | [TensorFlow Embedding Projector](https://projector.tensorflow.org/) | **High-Dimensional Genomic Projections:** Project whole-genome embeddings (from DNABERT or k-mer distributions) into 3D using UMAP/t-SNE to visualize the phylogenetic clustering of resistant vs susceptible bacterial clades. |
+| **Attention over Long Genomic Contigs** | [Sebastian Raschka's Attention Guide](https://magazine.sebastianraschka.com/p/visual-attention-variants) | **Long-Context Attention Variants:** Evaluate FlashAttention, sliding-window attention, and Ring Attention architectures capable of processing multi-hundred-kilobase bacterial chromosomes without quadratic memory explosions. |
+| **Genomics Dataset Exploration** | [HF Viewer](https://hfviewer.com/) | **WGS & Metagenomic Metadata Preview:** Rapidly inspect open-source microbial genomics datasets, AMR metadata annotations, and clinical MIC distribution tables without heavy local storage overhead. |
+| **Transformer Forward Pass in Sequence Models** | [LLM Visualization by Brendan Bycroft](https://bbycroft.net/llm) | **DNA Sequence Transformer Geometry:** Visualize tensor transformations, token embeddings, and multi-head attention blocks operating on biological sequence inputs. |
+| **Mechanistic Motif Attribution** | [Neuronpedia](https://www.neuronpedia.org/) | **Resistance Motif Attribution:** Understand how individual attention heads and hidden neurons correlate with specific conserved functional resistance sequences (e.g. beta-lactamase active sites, quinolone resistance-determining regions). |
+| **High-Throughput Clinical Sequencing Serving** | [Modular LLM Inference Handbook](https://handbook.modular.com/llm-inference-basics/what-is-llm-inference/) | **Bedside Diagnostics Latency:** Systems engineering guide for optimizing GPU memory bandwidth and inference latency during real-time basecalling and continuous streaming metagenomic profiling. |
+| **Non-Linear Phenotype Boundaries** | [TensorFlow Playground](https://playground.tensorflow.org/) | **Multi-Locus Epistatic Interactions:** Visualize how multi-layer neural architectures capture complex non-linear combinations of genetic mutations that collectively confer high-level resistance. |
+| **Statistical Genomics & Odds Ratios** | [Seeing Theory (Brown University)](https://seeing-theory.brown.edu/) | **Genome-Wide Significance & Fisher's Exact:** Conceptualize p-value adjustments, false discovery rates (FDR), and odds ratios in microbial genome-wide association studies (GWAS). |
+| **Multi-Label Evaluation Curves** | [MLU-Explain](https://mlu-explain.github.io/) | **Imbalanced Resistance Evaluation:** Examine Precision-Recall curves and ROC/AUC metrics over sparse multi-label distributions where specific resistance phenotypes are rare. |
+| **Dimensionality Reduction Intuition** | [Explained Visually (Setosa PCA)](https://setosa.io/ev/pca/) | **Principal Component Analysis on Genomic Variants:** Geometric understanding of how PCA reduces thousands of sparse SNP markers into major population structure components. |
+| **PyTorch Autograd & Sequence Models** | [Karpathy's Zero to Hero](https://karpathy.ai/zero-to-hero.html) | **Code-First Biological Modeling:** Reference for implementing custom character-level language models, cross-entropy loss functions, and backpropagation for DNA sequences. |
+
+---
+
+## 🛠️ My Work: Key Scientific & Engineering Contributions
+
+* **Curated AMR Literature Repository:** Synthesized and organized a curated literature library (2015–2025) of landmark studies covering transfer learning, deep neural networks (MSDeepAMR, DeepARG), and whole-genome sequencing in antimicrobial resistance under the mentorship of Prof. Aasif Assad.
+* **Genomic Architecture Formulation:** Designed the theoretical and computational architecture for sequence-based resistance modeling, translating raw sequencing data into multi-label phenotypic resistance predictions.
+* **Comparative Bioinformatics Benchmarking:** Formulated benchmarking protocols comparing alignment-free k-mer tokenization vs foundation model embeddings for antimicrobial susceptibility classification.
+* **Open-Source Scientific Repository:** Structured and maintained the `omicgene` open-source codebase, ensuring strict compliance with open science standards, Zenodo citable DOI indexing, and academic reproducibility guidelines.
+
+---
+
+## 🚀 Future Work & Research Roadmap
+
+1. **Bacterial Pangenome Foundation Model:** Train a self-supervised foundation transformer across hundreds of thousands of bacterial isolate genomes to learn universal regulatory and coding grammar.
+2. **Nanopore Real-Time Adaptive Sampling:** Interface neural resistance models with Oxford Nanopore's ReadUntil API to dynamically reject non-pathogenic DNA and selectively sequence antibiotic resistance genes in real-time.
+3. **Structural Protein Co-Folding for Mutational Impact:** Integrate AlphaFold 3 / Boltz-2 protein-ligand co-folding into the prediction loop to model how novel target mutations physically alter antibiotic binding affinity (e.g. Rifampicin binding to RNA polymerase).
+4. **Metagenomic Wastewater Surveillance Pipeline:** Deploy an automated streaming bioinformatics pipeline to monitor community-level antimicrobial resistance emergence from municipal metagenomic sequencing.
+
+---
+
 ## Overview
 
 Welcome to **omicgene**! This repository is dedicated to advancing computational genomics and machine learning methods to combat antimicrobial resistance.
